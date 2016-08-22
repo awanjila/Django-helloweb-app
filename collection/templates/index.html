@@ -1,10 +1,7 @@
-<!doctype html>
-<html>
-	<head>
-		<title>Road to Mastery of Django</title>
-	</head>
-	<body>
-		<h1>So help me God!</h1>
-		<p>I am a basic website!!</p>
-	</body>
-</html>
+{% extends 'layouts/base.html'%}
+{% block title %}Homepage -{{block.super}}{%endblock%}
+{% block content %}
+	<h1>Gods speed</h1>
+	<p>Home page
+	</p>
+	{% endblock%}
