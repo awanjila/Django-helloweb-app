@@ -1,10 +1,9 @@
 from django.shortcuts import render
+from collection.models import Thing
 
 # Create your views here.
 def index(request):
-	number=7
-	thing ="Wanjila Abraham Muchika"
+	things=Thing.objects.all()
 	return render(request,'index.html', {
-		'number': number,
-		'thing': thing,
+		'things':things,
 		})
