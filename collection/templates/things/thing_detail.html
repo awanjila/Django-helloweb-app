@@ -7,7 +7,7 @@
     
       <h1> {{thing.name }}</h1>
        <p>{{thing.description }}</p>
-       {% if user==thing.user %}
+       {% if user == thing.user %}
        <p>
        <a href="{% url 'edit_thing' slug=thing.slug %}">Edit me!</a>
       </p>
