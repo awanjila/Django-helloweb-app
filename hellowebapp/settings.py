@@ -132,3 +132,5 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
 LOGIN_REDIRECT_URL = "home"
+# XXX: Update me before launch!
+ALLOWED_HOSTS = ['*']
