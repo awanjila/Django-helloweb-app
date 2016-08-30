@@ -128,6 +128,7 @@ STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = (
   os.path.join(BASE_DIR, 'static'),
  )
+
 ACCOUNT_ACTIVATION_DAYS = 7
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'abemuchikan@gmail.com'
