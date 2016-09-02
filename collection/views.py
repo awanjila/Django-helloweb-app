@@ -4,6 +4,7 @@ from collection.models import Thing
 from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
+from collection.forms import ContactForm
 
 def browse_by_name(request, initial=None):
 	if initial:
@@ -79,3 +80,10 @@ def create_thing(request):
 	return render(request, 'things/create_thing.html',{
           'form':form,
     })
+
+def contact(request):
+	form_class =ContactForm
+	return render(request, 'contact.html', {
+		'form':form_class,
+		})
+

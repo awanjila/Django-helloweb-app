@@ -75,6 +75,6 @@ urlpatterns = [
     url(r'^accounts/',
     	include('registration.backends.simple.urls')),
     url(r'^admin/', include(admin.site.urls)),
-
+      
 
 	]
