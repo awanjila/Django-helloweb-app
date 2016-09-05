@@ -5,12 +5,21 @@
 
 {% block content %}
     
-      <h1> {{thing.name }}</h1>
-       <p>{{thing.description }}</p>
-       {% if user == thing.user %}
-       <p>
+    <h1> {{thing.name }}</h1>
+    <p>{{thing.description }}</p>
+     {% if user == thing.user %}
+     <p>
        <a href="{% url 'edit_thing' slug=thing.slug %}">Edit me!</a>
       </p>
       {% endif %}
+    {% if social_accounts%}
+    <ul>
+    	{% for social_account in social_accounts %}
+    	<li>
+    		<a href="http://{{ social_account.network }}.com/{{social_account.username}}">{{social_account.network|title}}
+    	</li>
+    	{%endfor%}
+    </ul>
+    {%endif%}
 	{% endblock%}
 	
