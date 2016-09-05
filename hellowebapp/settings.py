@@ -139,3 +139,9 @@ EMAIL_PORT = 1025
 LOGIN_REDIRECT_URL = "home"
 # XXX: Update me before launch!
 ALLOWED_HOSTS = ['*']
+
+SERVER_EMAIL= 'abemuchikan@gmail.com'
+
+ADMINS =[
+('Wanjila', 'abemuchikan@gmail.com'),
+]

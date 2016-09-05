@@ -5,6 +5,7 @@ from django.template.defaultfilters import slugify
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from collection.forms import ContactForm
+from django.core.mail import mail_admins
 
 def browse_by_name(request, initial=None):
 	if initial:
@@ -36,6 +37,7 @@ def thing_detail(request, slug):
 		'thing':thing,
 		'social_accounts':social_accounts,
 		})
+
 @login_required
 def edit_thing(request, slug):
 	#grab the object
@@ -89,4 +91,6 @@ def contact(request):
 	return render(request, 'contact.html', {
 		'form':form_class,
 		})
+
+	mail.admins("our subject line", "Our content")
 
